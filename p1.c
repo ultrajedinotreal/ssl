@@ -74,6 +74,7 @@ void fcfs()
     ata=ata/n;
     printf("\n\nAvg waiting time = %f , Avg TA time = %f",awt,ata);
     printf("\n-----------------------------------------------------------------------");
+    printf("\n-----------------------------------------------------------------------");
 }
 
 void pri()
@@ -166,7 +167,7 @@ void pri()
         scanf("%d",&t[i]);
         td[i]=t[i];
     }
-
+//null
     for(i=0;i<n;++i)
     {
         for(j=i+1;j<n;++j)
