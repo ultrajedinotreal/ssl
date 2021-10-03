@@ -1,7 +1,9 @@
 #include <stdio.h>
-  #include <stdlib.h>
-  #include <string.h>
-  struct node
+#include <stdlib.h>
+#include <string.h>
+//sedon
+
+struct node
 {
 char name[50],file[50][50];
 int fileCount, dirCount;
