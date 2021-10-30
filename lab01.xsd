@@ -1,0 +1,65 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="bibliography">
+        <xs:complexType>
+            <xs:choice minOccurs="1" maxOccurs="unbounded">
+                <xs:element name="article" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice maxOccurs="unbounded">
+                                <xs:element type="xs:string" name="author" maxOccurs="unbounded" minOccurs="1"/>
+                                <xs:element type="xs:string" name="title"/>
+                                <xs:element type="xs:string" name="year"/>
+                                <xs:element type="xs:string" name="startpage"/>
+                                <xs:element type="xs:string" name="endpage"/>
+                                <xs:choice>
+                                    <xs:element type="xs:string" name="journal" maxOccurs="1" minOccurs="0"/>
+                                    <xs:element type="xs:string" name="magazine" maxOccurs="1" minOccurs="0"/>
+                                </xs:choice>
+                                <xs:element type="xs:string" name="volume" maxOccurs="1" minOccurs="0"/>
+                                <xs:element type="xs:string" name="publisher" maxOccurs="1" minOccurs="1"/>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="book" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice maxOccurs="unbounded">
+                                <xs:element type="xs:string" name="author" maxOccurs="unbounded" minOccurs="1"/>
+                                <xs:element type="xs:string" name="title"/>
+                                <xs:element type="xs:string" name="year"/>
+                                <xs:element type="xs:string" name="publisher" maxOccurs="1" minOccurs="1"/>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="unpublished" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice maxOccurs="unbounded">
+                                <xs:element type="xs:string" name="author" maxOccurs="unbounded" minOccurs="1"/>
+                                <xs:element type="xs:string" name="title"/>
+                                <xs:element type="xs:string" name="year"/>
+                            </xs:choice>    
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="website" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:choice maxOccurs="unbounded">
+                                <xs:element type="xs:string" name="author" maxOccurs="unbounded" minOccurs="1"/>
+                                <xs:element type="xs:string" name="title"/>
+                                <xs:element type="xs:string" name="date"/>
+                                <xs:element type="xs:string" name="url"/>
+                            </xs:choice>    
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

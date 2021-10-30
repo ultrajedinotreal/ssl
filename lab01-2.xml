@@ -1,0 +1,9 @@
+<course code="CO3102">
+    <name> Mobile and Web apps</name>
+    <room>Ben LT1</room>
+    <list>
+        <student>Alice</student>
+        <student>John</student>
+    </list>
+    <message>Hello</message>
+</course>
